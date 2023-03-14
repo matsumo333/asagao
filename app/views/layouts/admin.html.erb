@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
     <title><%= page_title %></title>
     <%= csrf_meta_tags %>
-    <%# <%= csp_meta_tag %>
+    <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -16,7 +17,7 @@
       </header>
       <main>
         <% if flash.notice %>
-          <p class="notice"><%= flash.notice %></p>
+        <p class="notice"><%= flash.notice %></p>
         <% end %>
 
         <%= yield %>
