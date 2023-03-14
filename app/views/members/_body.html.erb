@@ -1,13 +1,5 @@
 <table class="attr">
   <tr>
-    <th>プロフィール画像</th>
-    <td>
-      <% if @member.profile_picture.attached? %>
-        <%= image_tag @member.profile_picture.variant(resize: "128x128") %>
-      <% end %>
-    </td>
-  </tr>
-  <tr>
     <th width="150">背番号</th>
     <td><%= @member.number %></td>
   </tr>
@@ -21,7 +13,7 @@
   </tr>
   <tr>
     <th>性別</th>
-    <td><%= @member.gender == 0 ? "男" : "女" %></td>
+    <td><%= @member.sex == 1 ? "男" : "女" %></td>
   </tr>
   <tr>
     <th>誕生日</th>
