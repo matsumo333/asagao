@@ -16,13 +16,13 @@ class ArticlesController < ApplicationController
 
   # 記事詳細
   def show
-    # articles = Article.all
+    articles = Article.all
 # 
-    # articles = articles.open_to_the_public unless current_member
-# 
-    # unless current_member&.administrator?
-      # articles = articles.visible
-    # end
+    articles = articles.open_to_the_public unless current_member
+
+    unless current_member&.administrator?
+      articles = articles.visible
+    end
 
     @article = Article.find(params[:id])
   end
