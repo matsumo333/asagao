@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
       # @articles = @articles.visible
     # end
 
-    # @articles = @articles.page(params[:page]).per(5)
+    @articles = @articles.page(params[:page]).per(5)
   end
 
   # 記事詳細
